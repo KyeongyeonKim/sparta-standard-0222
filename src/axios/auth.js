@@ -19,3 +19,13 @@ authApi.interceptors.request.use(
     return Promise.reject(err);
   }
 );
+
+authApi.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (err) => {
+    console.log("error : ", err);
+    return Promise.reject(err);
+  }
+);
